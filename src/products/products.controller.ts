@@ -24,7 +24,7 @@ export class ProductsController {
   }
 
   // Create a new product within a category
-  @Post('products/:categoryId')
+  @Post(':categoryId')
   async createProduct(
     @Param('categoryId') categoryId: number,
     @Body() createProductDto: CreateProductDto,
@@ -51,7 +51,7 @@ export class ProductsController {
   }
 
   // Get a single product by ID (you can add error handling for non-existent products)
-  @Get('products/:id')
+  @Get(':id')
   async findProductById(@Param('id') id: number): Promise<any> {
     return await this.productsService.findProductById(id); // Implement logic in service
   }
@@ -63,7 +63,7 @@ export class ProductsController {
   }
 
   // Delete a product (you can add error handling for non-existent products)
-  @Delete('products/:id')
+  @Delete(':id')
   async deleteProduct(@Param('id') id: number): Promise<any> {
     return await this.productsService.deleteProduct(id); // Implement logic in service
   }
