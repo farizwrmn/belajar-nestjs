@@ -69,12 +69,11 @@ export class ProductsController {
     return await this.productsService.updateCategory(id, updateCategoryDto);
   }
 
-  // Update a product (you can add validation for updated data)
   // @Put('products/:id')
   // async updateProduct(
   //   @Param('id') id: number,
   //   @Body() updateProductDto: any,
   // ): Promise<any> {
-  //   return await this.productsService.updateProduct(updateProductDto); // Implement logic in service
+  //   return await this.productsService.updateProduct(updateProductDto);
   // }
 }
